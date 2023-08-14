@@ -64,23 +64,7 @@ export default {
     return {
       newWorkerName: "",
       newWorkerHour: 0,
-      workers: [
-        {
-          name: "Joel",
-          hours: 3.5,
-          toggleRemove: false
-        },
-        {
-          name: "Kim",
-          hours: 7.0,
-          toggleRemove: false
-        },
-        {
-          name: "Jesus",
-          hours: 4.0,
-          toggleRemove: false
-        }
-      ]
+      workers: []
     }
   },
   methods: {
@@ -96,6 +80,7 @@ export default {
     },
     removeWorker(i) {
       this.workers.splice(i, 1)
+      this.$emit('changedWorkers', this.workers)
     },
     addNewWorker() {
       let newWorker = {
@@ -108,6 +93,8 @@ export default {
 
       this.newWorkerName = ""
       this.newWorkerHour = 0
+
+      this.$emit('changedWorkers', this.workers)
     }
   }
 }
