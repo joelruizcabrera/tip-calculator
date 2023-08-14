@@ -3,7 +3,7 @@
       ref="inputRef"
       type="text"
       name="tipSum"
-      class="form-control w-100 rounded" id="tipSum" aria-describedby="basic-addon3 basic-addon4"
+      class="form-control w-100 rounded" id="tipSum" aria-describedby="basic-addon3 basic-addon4" style="font-size: 1.4rem"
   />
 </template>
 
