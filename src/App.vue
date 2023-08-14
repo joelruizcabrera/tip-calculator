@@ -12,6 +12,7 @@ import { RouterView } from 'vue-router'
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         box-shadow: 0 5px #ddd;
+        z-index: 999;
       "
   >
     <h1 style="
