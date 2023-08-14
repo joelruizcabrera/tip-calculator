@@ -1,4 +1,5 @@
-# .
+# TIP CALCULATOR
+[![Netlify Status](https://api.netlify.com/api/v1/badges/23a989ff-ccf8-4fd6-b79a-d4bd7cd54812/deploy-status)](https://app.netlify.com/sites/stupendous-stroopwafel-ca4d5a/deploys)
 
 This template should help get you started developing with Vue 3 in Vite.
 
