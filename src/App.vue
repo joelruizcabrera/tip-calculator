@@ -1,35 +1,47 @@
-<script setup>
-import { RouterView } from 'vue-router'
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <div
-      class="header--container"
-      style="
-        position: fixed;
-        width: 100vw;
-        background: #fff;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        box-shadow: 0 5px #ddd;
-        z-index: 999;
-      "
-  >
-    <h1 style="
-      font-weight: bolder;
-      font-size: 1.6rem;
-      text-align: center;
-      height: 3.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    ">
-      TIP CALCULCATOR
-    </h1>
-  </div>
-  <RouterView />
+  <header>
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+    </div>
+  </header>
+
+  <main>
+    <TheWelcome />
+  </main>
 </template>
 
 <style scoped>
+header {
+  line-height: 1.5;
+}
 
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
 </style>
