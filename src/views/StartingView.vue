@@ -1,5 +1,6 @@
 <template>
-  <div class="w-screen min-h-screen flex items-center justify-center">
+  <div class="w-screen min-h-screen flex items-center justify-center flex-col">
+    <h1 class="mb-10 text-3xl uppercase font-bold text-center">EASY<br>TIP-CALCULATOR</h1>
     <RouterLink to="/create">
       <button
           type="button"

@@ -2,6 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { createCapacitorPersistPlugin } from './helpers/capacitor-persist-plugin'
 
 import StartingView from "@/views/StartingView.vue";
 import CreateView from "@/views/CreateView.vue";
@@ -27,8 +28,11 @@ const router = createRouter({
 })
 
 const app = createApp(App)
+const pinia = createPinia()
 
-app.use(createPinia())
+pinia.use(createCapacitorPersistPlugin())
+
+app.use(pinia)
 app.use(router)
 
 app.mount('#app')
